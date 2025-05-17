@@ -33,8 +33,10 @@ app.listen(PORT, () => {
 const projectRoutes = require('./routes/projectRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const skillRoutes = require('./routes/skillRoutes');
+const educationRoutes = require('./routes/educationRoutes');
 
 
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/skills', skillRoutes);
+app.use('/api/education', educationRoutes);
