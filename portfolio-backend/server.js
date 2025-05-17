@@ -34,9 +34,11 @@ const projectRoutes = require('./routes/projectRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const skillRoutes = require('./routes/skillRoutes');
 const educationRoutes = require('./routes/educationRoutes');
+const experienceRoutes = require('./routes/experienceRoutes');
 
 
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/education', educationRoutes);
+app.use('/api/experience', experienceRoutes);
