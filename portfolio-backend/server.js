@@ -12,10 +12,6 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // parse JSON bodies
 
-// Sample route to test server
-app.get('/', (req, res) => {
-  res.send('Portfolio API is running');
-});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -35,4 +31,7 @@ app.listen(PORT, () => {
 });
 
 const projectRoutes = require('./routes/projectRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+
 app.use('/api/projects', projectRoutes);
+app.use('/api/contact', contactRoutes);
