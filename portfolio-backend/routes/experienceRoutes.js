@@ -3,11 +3,13 @@ const router = express.Router();
 const {
   getAllExperience,
   createExperience,
-  deleteExperience
+  deleteExperience,
+  getExperienceById
 } = require('../controllers/experienceController');
 
 router.get('/', getAllExperience);
 router.post('/', createExperience);
 router.delete('/:id', deleteExperience);
+router.get('/:id', getExperienceById);
 
 module.exports = router;

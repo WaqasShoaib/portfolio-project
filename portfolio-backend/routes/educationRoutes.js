@@ -3,11 +3,13 @@ const router = express.Router();
 const {
   getAllEducation,
   createEducation,
-  deleteEducation
+  deleteEducation,
+  getEducationById
 } = require('../controllers/educationController');
 
 router.get('/', getAllEducation);
 router.post('/', createEducation);
 router.delete('/:id', deleteEducation);
+router.get('/:id', getEducationById);
 
 module.exports = router;

@@ -35,6 +35,18 @@ const createEducation = async (req, res) => {
   }
 };
 
+const getEducationById = async (req, res) => {
+  try {
+    const education = await Education.findById(req.params.id);
+    if (!education) {
+      return res.status(404).json({ message: 'Education record not found' });
+    }
+    res.json(education);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 // DELETE education entry
 const deleteEducation = async (req, res) => {
   try {
@@ -50,4 +62,5 @@ module.exports = {
   getAllEducation,
   createEducation,
   deleteEducation,
+  getEducationById,
 };
