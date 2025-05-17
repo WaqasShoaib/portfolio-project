@@ -1,0 +1,22 @@
+.projects {
+  padding: 2rem;
+  padding-bottom: 5rem; /* Prevent footer overlap */
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  align-items: stretch;
+}

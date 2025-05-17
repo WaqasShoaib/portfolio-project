@@ -1,0 +1,26 @@
+.contact {
+  padding-bottom: 3rem; /* space for footer */
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
