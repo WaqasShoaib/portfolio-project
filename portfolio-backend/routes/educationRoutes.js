@@ -4,12 +4,14 @@ const {
   getAllEducation,
   createEducation,
   deleteEducation,
-  getEducationById
+  getEducationById,
+  updateEducation
 } = require('../controllers/educationController');
 
 router.get('/', getAllEducation);
 router.post('/', createEducation);
 router.delete('/:id', deleteEducation);
 router.get('/:id', getEducationById);
+router.put('/:id', updateEducation);
 
 module.exports = router;

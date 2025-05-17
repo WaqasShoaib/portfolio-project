@@ -58,9 +58,24 @@ const deleteEducation = async (req, res) => {
   }
 };
 
+const updateEducation = async (req, res) => {
+  try {
+    const updated = await Education.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!updated) return res.status(404).json({ message: 'Education not found' });
+    res.json(updated);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   getAllEducation,
-  createEducation,
-  deleteEducation,
   getEducationById,
+  createEducation,
+  updateEducation, 
+  deleteEducation,
 };
+
