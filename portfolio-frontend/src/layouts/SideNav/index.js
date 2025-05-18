@@ -50,14 +50,14 @@ const SideNav = ({ open, onClose }) => {
 
   // Add import at top
 
-// Update navigationItems array
   const navigationItems = [
     { text: 'Home', icon: <HomeIcon color="inherit" />, path: '/' },
     { text: 'Education', icon: <SchoolIcon color="inherit" />, path: '/education' },
-    { text: 'Experience', icon: <WorkHistoryIcon color="inherit" />, path: '/experience' }, // New entry
+    { text: 'Experience', icon: <WorkHistoryIcon color="inherit" />, path: '/experience' },
     { text: 'Projects', icon: <WorkIcon color="inherit" />, path: '/projects' },
     { text: 'Contact', icon: <EmailIcon color="inherit" />, path: '/contact' }
   ];
+
 
   const drawerContent = (
     <>
@@ -140,11 +140,15 @@ const SideNav = ({ open, onClose }) => {
                 </ListItemIcon>
               </Tooltip>
               {isExpanded && (
-                <ListItemText 
-                  primary={item.text} 
-                  primaryTypographyProps={{ noWrap: true }}
-                />
-              )}
+              <ListItemText 
+                primary={item.text} 
+                primaryTypographyProps={{
+                  noWrap: true,
+                  sx: { color: isActive ? '#3f51b5' : '#333' }
+                }}
+              />
+            )}
+
             </ListItem>
           );
         })}
