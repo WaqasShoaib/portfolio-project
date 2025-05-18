@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styles from './ContactForm.module.css';
+import axios from '../../api/axiosInstance';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const errs = {};
@@ -18,17 +20,26 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length) {
       setErrors(validationErrors);
       setAlert('');
-    } else {
-      setErrors({});
-      setAlert('Your message has been sent!');
-      // Here you could integrate an email service or API call.
+      return;
+    }
+
+    setErrors({});
+    setLoading(true);
+
+    try {
+      const res = await axios.post('/api/contact', formData);
+      setAlert(res.data.message || 'Your message has been sent!');
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setAlert('Something went wrong. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -72,7 +83,9 @@ const ContactForm = () => {
         {errors.message && <span className={styles.error}>{errors.message}</span>}
       </div>
 
-      <button type="submit" className={styles.submit}>Send Message</button>
+      <button type="submit" className={styles.submit} disabled={loading}>
+        {loading ? 'Sending...' : 'Send Message'}
+      </button>
     </form>
   );
 };

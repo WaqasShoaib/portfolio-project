@@ -17,7 +17,17 @@ const submitContact = async (req, res) => {
     res.status(500).json({ message: 'Failed to submit message', error: error.message });
   }
 };
+// GET all contact messages
+const getAllContacts = async (req, res) => {
+  try {
+    const messages = await Contact.find().sort({ createdAt: -1 });
+    res.json(messages);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 module.exports = {
   submitContact,
+  getAllContacts, // 👈 add this
 };
