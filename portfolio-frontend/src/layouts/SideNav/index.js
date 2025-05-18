@@ -28,7 +28,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-// Removed StarIcon import to fix the warning
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 
 const SideNav = ({ open, onClose }) => {
   const location = useLocation();
@@ -48,9 +48,13 @@ const SideNav = ({ open, onClose }) => {
     }
   };
 
+  // Add import at top
+
+// Update navigationItems array
   const navigationItems = [
     { text: 'Home', icon: <HomeIcon color="inherit" />, path: '/' },
     { text: 'Education', icon: <SchoolIcon color="inherit" />, path: '/education' },
+    { text: 'Experience', icon: <WorkHistoryIcon color="inherit" />, path: '/experience' }, // New entry
     { text: 'Projects', icon: <WorkIcon color="inherit" />, path: '/projects' },
     { text: 'Contact', icon: <EmailIcon color="inherit" />, path: '/contact' }
   ];

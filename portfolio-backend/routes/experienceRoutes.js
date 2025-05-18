@@ -4,12 +4,14 @@ const {
   getAllExperience,
   createExperience,
   deleteExperience,
-  getExperienceById
+  getExperienceById,
+  updateExperience,
 } = require('../controllers/experienceController');
 
 router.get('/', getAllExperience);
 router.post('/', createExperience);
 router.delete('/:id', deleteExperience);
 router.get('/:id', getExperienceById);
+router.put('/:id', updateExperience);
 
 module.exports = router;

@@ -48,12 +48,25 @@ const getExperienceById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
+const updateExperience = async (req, res) => {
+  try {
+    const updated = await Experience.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!updated) return res.status(404).json({ message: 'Experience not found' });
+    res.json(updated);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 module.exports = {
   getAllExperience,
-  createExperience,
-  deleteExperience,
   getExperienceById,
+  createExperience,
+  updateExperience, 
+  deleteExperience,
 };
+
 
 

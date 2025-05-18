@@ -44,9 +44,11 @@ const Header = () => {
     setDrawerOpen(!drawerOpen);
   };
 
+  // Add to navigationLinks array
   const navigationLinks = [
     { title: 'Home', path: '/' },
     { title: 'Education', path: '/education' },
+    { title: 'Experience', path: '/experience' }, // New entry
     { title: 'Projects', path: '/projects' },
     { title: 'Contact', path: '/contact' }
   ];

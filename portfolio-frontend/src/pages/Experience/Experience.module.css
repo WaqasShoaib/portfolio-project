@@ -1,0 +1,42 @@
+.fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.experienceTable {
+  margin-top: 2rem;
+}
+
+.roleHighlight {
+  color: var(--color-primary, #1976d2);
+  font-weight: 600;
+}
+
+.techPill {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 2px;
+  background-color: rgba(25, 118, 210, 0.1);
+  border-radius: 20px;
+  color: #1976d2;
+  font-size: 0.85rem;
+}
+
+.responsibilityList {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.responsibilityList li {
+  margin-bottom: 6px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
