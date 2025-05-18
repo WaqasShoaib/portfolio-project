@@ -55,11 +55,27 @@ const getSkillById = async (req, res) => {
   }
 };
 
+const updateSkill = async (req, res) => {
+  try {
+    const updated = await Skill.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
+    if (!updated) {
+      return res.status(404).json({ message: 'Skill not found' });
+    }
+    res.json(updated);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getSkills,
-  createSkill,
-  deleteSkill,
   getSkillById,
+  createSkill,
+  updateSkill, 
+  deleteSkill
 };
 
 

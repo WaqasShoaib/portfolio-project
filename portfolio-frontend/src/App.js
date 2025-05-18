@@ -14,6 +14,8 @@ const Education = lazy(() => import('./pages/Education'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Experience = lazy(() => import('./pages/Experience'));
+const Skills = lazy(() =>import ('./pages/Skills'));
+
 
 function App() {
   const theme = useTheme();
@@ -59,6 +61,7 @@ function App() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/experience" element={<Experience />} />
+                    <Route path="/skills" element={<Skills />} />
                   </Routes>
                 </Suspense>
               </div>

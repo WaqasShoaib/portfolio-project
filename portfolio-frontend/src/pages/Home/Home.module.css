@@ -1,212 +1,214 @@
 .container {
-  padding: 4rem 0;
-  min-height: calc(100vh - 64px); /* Adjust for header height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+   padding: 4rem 0;
+   min-height: calc(100vh - 64px); /* Adjust for header height */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   overflow-x: hidden; /* Prevent horizontal scrolling */
+   width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+   margin-bottom: 0.1rem; /* Add bottom margin to create space for footer */
 }
 
 .content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 1rem;
+   box-sizing: border-box;
 }
 
 .headline {
-  margin-bottom: 4rem;
-  position: relative;
-  text-align: center;
+   margin-bottom: 4rem;
+   position: relative;
+   text-align: center;
 }
 
 .greeting {
-  display: inline-block;
-  font-size: 0.9rem;
-  color: #3f51b5;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding: 0 10px;
+   display: inline-block;
+   font-size: 0.9rem;
+   color: #3f51b5;
+   letter-spacing: 2px;
+   margin-bottom: 1.5rem;
+   position: relative;
+   padding: 0 10px;
 }
 
 .greeting::before, .greeting::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 1px;
-  background-color: #3f51b5;
+   content: "";
+   position: absolute;
+   top: 50%;
+   width: 30px;
+   height: 1px;
+   background-color: #3f51b5;
 }
 
 .greeting::before {
-  left: -40px;
+   left: -40px;
 }
 
 .greeting::after {
-  right: -40px;
+   right: -40px;
 }
 
 .title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #333;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+   font-size: 2.2rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
+   color: #333;
+   letter-spacing: -0.03em;
+   line-height: 1.1;
 }
 
 .name {
-  color: #3f51b5;
-  position: relative;
-  display: inline-block;
+   color: #3f51b5;
+   position: relative;
+   display: inline-block;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+   font-size: 1.1rem;
+   color: #666;
+   margin-bottom: 1.5rem;
+   font-weight: 400;
 }
 
 .intro {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+   font-size: 1.1rem;
+   line-height: 1.6;
+   color: #555;
+   margin-bottom: 2rem;
+   max-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .buttonGroup {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+   margin-bottom: 3rem;
 }
 
 .ctaButton {
-  padding: 0.8rem 2rem !important;
-  border-radius: 4px !important;
-  font-weight: 500 !important;
-  text-transform: none !important;
-  font-size: 1rem !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.2s ease !important;
+   padding: 0.8rem 2rem !important;
+   border-radius: 4px !important;
+   font-weight: 500 !important;
+   text-transform: none !important;
+   font-size: 1rem !important;
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+   transition: all 0.2s ease !important;
 }
 
 .ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .techSection {
-  margin-top: 2rem;
-  text-align: center;
-  width: 100%;
+   margin-top: 2rem;
+   text-align: center;
+   width: 100%;
 }
 
 .skillsRow {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   width: 100%;
+   margin: 0 auto;
 }
 
 .sectionTitle {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-bottom: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
+   position: relative;
+   margin-bottom: 2rem;
+   padding-bottom: 0.75rem;
+   font-weight: 600;
+   display: inline-block;
 }
 
 .sectionTitle::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 60px;
-  height: 3px;
-  background-color: #3f51b5;
+   content: "";
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0;
+   width: 60px;
+   height: 3px;
+   background-color: #3f51b5;
 }
 
 .skillCard {
-  padding: 2rem !important;
-  border-radius: 8px !important;
-  background-color: #ffffff !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   padding: 2rem !important;
+   border-radius: 8px !important;
+   background-color: #ffffff !important;
+   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
+   height: 100%;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skillCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
 }
 
 .cardTitle {
-  color: #3f51b5;
-  margin-bottom: 1.5rem !important;
-  font-weight: 600 !important;
-  font-size: 1.2rem !important;
+   color: #3f51b5;
+   margin-bottom: 1.5rem !important;
+   font-weight: 600 !important;
+   font-size: 1.2rem !important;
 }
 
 .chipContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.8rem;
+   justify-content: center;
 }
 
 .techChip {
-  font-size: 0.9rem !important;
-  background-color: #f5f5f5 !important;
-  border: 1px solid #eeeeee !important;
-  transition: all 0.2s ease !important;
-  color: #333 !important;
-  font-weight: 500 !important;
-  padding: 10px 15px !important;
+   font-size: 0.9rem !important;
+   background-color: #f5f5f5 !important;
+   border: 1px solid #eeeeee !important;
+   transition: all 0.2s ease !important;
+   color: #333 !important;
+   font-weight: 500 !important;
+   padding: 10px 15px !important;
 }
 
 .techChip:hover {
-  background-color: rgba(63, 81, 181, 0.1) !important;
-  border-color: rgba(63, 81, 181, 0.3) !important;
+   background-color: rgba(63, 81, 181, 0.1) !important;
+   border-color: rgba(63, 81, 181, 0.3) !important;
 }
 
 @media (max-width: 900px) {
-  .container {
-    padding: 2rem 1rem;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-  }
-  
-  .ctaButton {
-    width: 100%;
-    max-width: 250px;
-  }
+   .container {
+     padding: 2rem 1rem;
+     margin-bottom: 3rem; /* Slightly less space on smaller screens */
+   }
+   
+   .title {
+     font-size: 1.8rem;
+   }
+   
+   .subtitle {
+     font-size: 1rem;
+   }
+   
+   .ctaButton {
+     width: 100%;
+     max-width: 250px;
+   }
 }
 
 @media (max-width: 600px) {
-  .skillsRow {
-    flex-direction: column;
-  }
-  
-  .skillsRow > div {
-    width: 100% !important;
-    margin-bottom: 20px;
-  }
+   .skillsRow {
+     flex-direction: column;
+   }
+   
+   .skillsRow > div {
+     width: 100% !important;
+     margin-bottom: 20px;
+   }
 }
